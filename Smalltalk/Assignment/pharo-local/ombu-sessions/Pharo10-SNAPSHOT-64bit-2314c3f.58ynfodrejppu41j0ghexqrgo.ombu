@@ -1,0 +1,1 @@
+OmEntry {	#tags : {		#author : 'Unknown',		#time : DateAndTime [ '2023-02-24T18:43:09.312-05:00' ],		#prior : OmReference [ 'Pharo10-SNAPSHOT-64bit-2314c3f.ac8od8nhp3gs87owj80jemh60', '2' ],		#self : OmReference [ '1' ]	},	#content : EpSessionSnapshot {		#imageName : 'C:\\Users\\asher\\Documents\\Pharo\\images\\Assignment\\Assignment.image'	}}

@@ -1,0 +1,74 @@
+% Enter the names of your group members below.
+% If you only have 2 group members, leave the last space blank
+%
+%%%%%
+%%%%% NAME: Khushi Chowdhury
+%%%%% NAME: Asher Andargachew
+%%%%% NAME: Wathaned Ean
+%
+% Add your test queries below, along with a description of the test you are performing.
+% The format can look as follows
+% 
+% %%%%% QUERY 2
+% %% Description: Checks that we can get any jazz album. More should enumerate all of them
+% what([any, jazz, album], A).
+%
+
+%%%%%% QUERY 1
+%% Description:Checks if there's a hiphop song by juice wrld.
+
+what([a, hip_hop, song, by, juice_wrld], S).
+
+
+%%%%%% QUERY 2
+%% Description:Checks the genre of the album damn.
+
+what([the, genre, of, damn], G).
+
+
+%%%%%% QUERY 3
+%% Description: shows a new (current year) album by a pop artist.
+
+what([the, release_year, of, strangers], A).
+
+
+%%%%%% QUERY 4
+%% Description: checks the length of the song empty.
+
+what([the, length, of, empty], L).
+
+
+%%%%%% QUERY 5
+%% Description: shows the second song on the album damn.
+
+what([the, second, song, on, damn], S).
+
+
+%%%%%% QUERY 6
+%% Description: shows a short song released in the year 2020 if there's any.
+what([a, short, song, released_in, 2020], S).
+
+
+
+%%%%%% QUERY 7
+%% Description:shows a long song by the artist j Cole if there is any.
+
+what([a, long, song, by, j_cole], S).
+
+
+%%%%%% QUERY 8
+%% Description: shows an album by rae sremmurd that was released before the album rtj4 if there is any
+
+what([a, rae_sremmurd, album, released_before, rtj4], S).
+
+
+%%%%%% QUERY 9
+%% Description:shows a new song by labrinth if there's any.
+
+what([a, new, song, by, labrinth], S).
+
+
+%%%%%% QUERY 10
+%% Description: shows an old song by the artist the weeknd if there's any.
+
+what([a, old, song, by, the_weeknd], S).

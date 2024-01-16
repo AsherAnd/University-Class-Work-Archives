@@ -1,0 +1,57 @@
+% Enter the names of your group members below.
+% If you only have 2 group members, leave the last space blank
+%
+%%%%%
+%%%%% NAME: Asher Andargachew
+%%%%% NAME: Khushi Chowdhury
+%%%%% NAME: Wathaned Ean
+%
+% Add your queries below.For example, if you want to add the query "pred(X, constant).", 
+% it should appear as follows:
+% 
+% %%%%% QUERY 2: Retrieves the block that is on top of blockA
+% on(X, blockA).
+%
+% where 2 is the number of the query. Omit the "%" on the line with the query below.
+% Don't forget to end queries with a period.
+%
+% Each query below is labelled with an English description of what should be queried for.
+
+%%%%%% QUERY 1: Did the record label Republic release an album called “Midnights”?
+albumLabel(midnights, republic).
+
+%%%%%% QUERY 2: Who was the artist that released the album “Renaissance”?
+albumArtist(renaissance, X).
+
+%%%%%% QUERY 3: Was there an artist who released albums in both 2010 and 2016, and if so, who was it?
+albumYear(Album1, 2010),albumYear(Album2, 2016),albumArtist(Album1,Artist),albumArtist(Album2,Artist). 
+
+%%%%%% QUERY 4: Was there an album that was released in the year 2012 that was not released by either the record label Columbia or the record label Republic?
+albumYear(Album,2012), not (albumLabel(Album,columbia),albumLabel(Album,republic)).
+
+%%%%%% QUERY 5: Did any artist release two different albums, each with a different record label?
+albumArtist(Album1, Artist),albumArtist(Album2, Artist),albumLabel(Album1,Label1),albumLabel(Album2,Label2), not (Label1 = Label2).
+
+%%%%%% QUERY 6: Did any artist release more than one album with the same record label?
+albumArtist(Album1,Artist),albumArtist(Album2,Artist),albumLabel(Album1,Label),albumLabel(Album2,Label),not (Album1 = Album2).
+
+%%%%%% QUERY 7: Did the artist who released an album called “30” release any albums in years before that one?
+albumArtist(30, Artist), albumYear(30, End_year), albumArtist(Album, Artist), albumYear(Album, Year), Year < End_year.
+
+%%%%%% QUERY 8: Was there a year from 2000 to 2023 (inclusive) that the record label Republic did not release an album?
+year(Year), albumLabel(Album, republic), not albumYear(Album, Year).
+
+%%%%%% QUERY 9: Was there an artist that released an album in 3 consecutive years starting in 2018 or later?
+year(Year1), Year1 >= 2018, Year2 is Year1 + 1, Year3 is Year1+2,albumArtist(Album1, Artist),albumArtist(Album2, Artist),albumArtist(Album3, Artist),albumYear(Album1, Year1),albumYear(Album2, Year2),albumYear(Album3, Year3), not (Album1 = Album2, Album1 = Album3, Album2 = Album3).
+
+%%%%%% QUERY 10: Did any record label release exactly one album in 2015?
+setof(Label, (albumYear(Album, 2015), albumLabel(Album, Label)), Labels), length(Labels, 1).
+
+%%%%%% QUERY 11: What was the last album released by Drake?
+albumArtist(Album,drake), albumYear(Album,Year),not (albumArtist(Album2, drake), albumYear(Album2, Year2), Year2 > Year).
+
+%%%
+%%%
+%%%
+%%%%% INTERACTION
+

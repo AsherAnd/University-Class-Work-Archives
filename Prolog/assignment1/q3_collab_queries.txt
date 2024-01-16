@@ -1,0 +1,89 @@
+% Enter the names of your group members below.
+% If you only have 2 group members, leave the last space blank
+%
+%%%%%
+%%%%% NAME: Khushi Chowdhury
+%%%%% NAME: Asher Andargachew
+%%%%% NAME: Wathaned Ean
+%
+% Add your queries below.For example, if you want to add the query "pred(X, constant).", 
+% it should appear as follows:
+% 
+% %%%%% QUERY 2
+% % EXPLANATION: Checks if there is a block on blockA
+% on(X, blockA).
+%
+% where 2 is the number of the query. The EXPLANATION line should contain your explanation 
+% in English of what the query tests. Omit the "%" on the line with the query
+% Don't forget to end queries with a period.
+
+
+%%%%%% QUERY 1
+% EXPLANATION: Did Khushi Chowdhury write an article?
+collabDist(khushi_chowdhury, khushi_chowdhury, 0).
+
+%%%%%% QUERY 2
+% EXPLANATION: Has the author Asher Andargachew collaborated on the same article with Khushi Chowdhury?
+collabDist(asher_andargachew, khushi_chowdhury, 1).
+
+%%%%%% QUERY 3
+% EXPLANATION: Is there at most 3 degress of separation between the authors Derrick Yu and Kim?
+collabDist(derrick_yu, kim, 3).
+
+%%%%%% QUERY 4
+% EXPLANATION: Has the author Wathaned Ean authored an article involving the topic of AI?
+collabDistWithAI(wathaned_ean, wathaned_ean, 0, at_least_one).
+
+%%%%%% QUERY 5
+% EXPLANATION: Has the author Abishaath authored an article not involving the topic of AI?
+collabDistWithAI(abishaath, abishaath, 0, none).
+
+%%%%%% QUERY 6
+% EXPLANATION: Is there a collaboration path of at most 3 degrees between Khushi Chowdhury and Ian Naunheimer without the topic of AI?
+collabDistWithAI(khushi_chowdhury, ian_naunheimer, 3, none).
+
+%%%%%% QUERY 7
+% EXPLANATION: Is there a collaboration path between Asher and Kim with Wathaned Ean in the path such that the total degrees of separation is no greater than 5?
+collabDist(kim, asher_andargachew, 5), collabDist(kim, wathaned_ean, 5).
+
+%%%%%% QUERY 8
+% EXPLANATION: Is there a collaboration path of at most 3 degrees and at least one programming topic in the path?
+collabDist(ian_chow, nada_eissar, 3), articleTopic(Article, programming).
+
+%%%%%% QUERY 9
+% EXPLANATION: Did Array and Derrick Yu write an article together involving the topic of AI?
+collabDistWithAI(array, derrick_yu, 1, at_least_one).
+
+%%%%%% QUERY 10
+% EXPLANATION: Did Asher Andargachew and Khushi Chowdhury write an article together not involving the topic of AI?
+collabDistWithAI(asher_andargachew, khushi_chowdhury, 1, none).
+
+
+% If you want to add more queries, put them above and use the same formatting as given above.
+
+
+%%%
+%%%
+%%%
+%%%%% INTERACTION
+%%% ?- collabDist(khushi_chowdhury, khushi_chowdhury, 0).
+%%% Yes (0.00s cpu, solution 1, maybe more)
+%%% ?- collabDist(asher_andargachew, khushi_chowdhury, 1).
+%%% Yes (0.00s cpu, solution 1, maybe more)
+%%% ?- collabDist(derrick_yu, kim, 3).
+%%% Yes (0.00s cpu, solution 1, maybe more)
+%%% ?- collabDistWithAI(wathaned_ean, wathaned_ean, 0, at_least_one).
+%%% No (0.00s cpu)
+%%% ?- collabDistWithAI(abishaath, abishaath, 0, none).
+%%% Yes (0.00s cpu, solution 1, maybe more)
+%%% ?- collabDistWithAI(khushi_chowdhury, ian_naunheimer, 3, none).
+%%% Yes (0.00s cpu, solution 1, maybe more)
+%%% ?- collabDist(kim, asher_andargachew, 5), collabDist(kim, wathaned_ean, 5).
+%%% Yes (0.00s cpu, solution 1, maybe more)
+%%% ?- collabDist(ian_chow, nada_eissar, 3), articleTopic(Article, programming).
+%%% Article = nim_is_king
+%%% Yes (0.00s cpu, solution 1, maybe more)
+%%% ?- collabDistWithAI(array, derrick_yu, 1, at_least_one).
+%%% Yes (0.00s cpu, solution 1, maybe more)
+%%% ?- collabDistWithAI(asher_andargachew, khushi_chowdhury, 1, none).
+%%% Yes (0.00s cpu, solution 1, maybe more)

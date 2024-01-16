@@ -1,0 +1,47 @@
+% Enter the names of your group members below.
+% If you only have 2 group members, leave the last space blank
+%
+%%%%%
+%%%%% NAME: Khushi Chowdhury
+%%%%% NAME: Asher Andargachew
+%%%%% NAME: Wathaned Ean
+%
+% Add your report below
+% 
+%%%%% SUMMARY
+%%%%% In 1-2 paragraphs, describe what part of the assignment you completed and discuss your overall findings.
+%%%%% Be sure to describe the computer you ran your tests on
+
+
+For the laundry.pl file, the first step was to make the actions for the robot, such as fetch, putAway, and
+other precondition axioms. To implement these, we had to go through the steps on how each action would be 
+possible. For the successor state axioms, we needed to implement what made it true and also what would negate
+the precondition axioms; for example, we needed to create the wet predicate by making sure the clothes were 
+washed but not yet dried to make sure they were wet. The heuristic predicates called useless were to avoid 
+redundancies and to create a smoother process. For example, don't add soap when you already have soap in the 
+washer. 
+
+The implementation was simple to write, but finding the relevant information to add to each predicate took 
+some thinking. We ran the tests on an MSI PS63 Modern 8SC with an intel core i7 8th gen CPU with 16 gigabytes
+of RAM.
+
+
+
+%%%%% INTERACTION IN REGULAR MODE
+%%%%% Include your interaction below when testing the planner in regular mode (ie. without declarative heuristics)
+
+?- solve_problem(regular, 1, 6, P).
+P = [washClothes(cl1, w1), putAway(cl1, w1), addSoftener(cl1, w1), addSoap(cl1, w1), fetch(cl1, h1)]
+Yes (9.28s cpu, solution 1, maybe more)
+
+?- solve_problem(regular, 2, 6, P).
+P = [dryClothes(cl1, C), washClothes(cl1, C), putAway(cl1, C), addSoftener(cl1, C), addSoap(cl1, C), fetch(cl1, h1)]
+Yes (420.91s cpu, solution 1, maybe more)
+
+
+
+%%%%% INTERACTION IN HEURISTIC MODE
+%%%%% Include your interaction below when testing the planner in heuristic mode (ie. when using declarative heuristics for pruning)
+
+Although we did not have enough time to run the heuristic code, we wrote some implementations 
+for it.

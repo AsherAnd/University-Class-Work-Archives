@@ -1,0 +1,58 @@
+% Enter the names of your group members below.
+% If you only have 2 group members, leave the last space blank
+%
+%%%%%
+%%%%% NAME: Khushi Chowdhury
+%%%%% NAME: Asher Andargachew
+%%%%% NAME: Wathaned Ean
+%
+% Add your queries below.For example, if you want to add the query "pred(X, constant).", 
+% it should appear as follows:
+% 
+% %%%%% QUERY 2
+% % EXPLANATION: Checks if there is a block on blockA
+% on(X, blockA).
+%
+% where 2 is the number of the query. The EXPLANATION line should contain your explanation 
+% in English of what the query tests. Omit the "%" on the line with the query
+% Don't forget to end queries with a period.
+
+
+%%%%%% QUERY 1
+% EXPLANATION: Finds the total for items in cart.
+
+?- subtotal(Subtotal)
+
+%%%%%% QUERY 2
+% EXPLANATION: Finds the total cost including tax and regular shipping for your cart.
+
+?- totalCost(regular, TotalCost).
+
+%%%%%% QUERY 3
+% EXPLANATION: Finds the total cost including tax and express shipping for your cart.
+
+?- totalCost(express, TotalCost).
+
+%%%%%% QUERY 4
+% EXPLANATION: Checks the total for items in cart.
+
+?- subtotal(1200).
+
+%%%%%% QUERY 5
+% EXPLANATION: total shipping cost for items in cart.
+
+?- calculateBaseShipping(ShippingCost).
+
+%%%%%% QUERY 6
+% EXPLANATION: calculated the express shipping cost for cart.
+
+?- calculateShipping(express, ShippingCost).
+
+% If you want to add more queries, put them above and use the same formatting as given above.
+
+
+%%%
+%%%
+%%%
+%%%%% INTERACTION
+

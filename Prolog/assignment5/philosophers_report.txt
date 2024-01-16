@@ -1,0 +1,50 @@
+% Enter the names of your group members below.
+% If you only have 2 group members, leave the last space blank
+%
+%%%%%
+%%%%% NAME: Khushi Chowdhury
+%%%%% NAME: Asher Andargachew
+%%%%% NAME: Wathaned Ean
+%
+% Add your report below
+% 
+%%%%% SUMMARY
+%%%%% In 1-2 paragraphs, describe what part of the assignment you completed and discuss your overall findings.
+%%%%% Be sure to describe the computer you ran your tests on
+PC: Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz, 1800 Mhz, 4 Core(s), 8 Logical Processor(s)
+	Installed Physical Memory (RAM)	16.0 GB
+
+For the philosophers.pl file, we first worked on defining the preconditions to ensure actions were possible such as
+picking up forks and checking to see if eating is possible by going through the documentation. Then we worked on the
+fluents, which was difficult at first since we used to fluents to define other fluents. We fixed all of that so our
+performance greatly increased. Then we worked on the heuristics and came up with our useless definitions based on
+logical conclusions, such as putting down a fork that was never picked up in the first place. In conclusion, the
+performance of our code was satisfactory through thorough analysis of the axioms and coding.
+
+%%%%% EXTRA GOALS FOR PART B
+%%%%% Include the extra goals you used for Part B here
+%%%%% Include a brief English description of each
+
+
+
+%%%%% INTERACTION IN REGULAR MODE
+%%%%% Include your interaction below when testing the planner in regular mode (ie. without declarative heuristics)
+solve_problem(regular, 1, 4, P) - Yes (0.28s cpu, solution 1, maybe more)
+solve_problem(regular, 5, 8, P) - No (178.25s cpu)
+solve_problem(regular, 5, 16, P) - Unknown, cpu took more than an hour
+
+
+%%%%% INTERACTION IN HEURISTIC MODE
+%%%%% Include your interaction below when testing the planner in heuristic mode (ie. when using declarative heuristics for pruning)
+
+?- solve_problem(heuristic, 1, 4, P)
+	P = [pickUp(p1, f1)]
+	Yes (0.00s cpu, solution 1, maybe more)
+
+?- solve_problem(heuristic, 3, 6, P).
+	P = [putDown(p1, f1), tryToEat(p1), pickUp(p1, f3), pickUp(p2, f2), pickUp(p1, f1)]
+	Yes (0.03s cpu, solution 1, maybe more)
+
+?- solve_problem(heuristic, 4, 8, P).
+	P = [putDown(p2, f2), tryToEat(p2), pickUp(p2, f1), putDown(p1, f1), tryToEat(p1), pickUp(p1, f3), pickUp(p2, f2), pickUp(p1, f1)]
+	Yes (11.41s cpu, solution 1, maybe more)

@@ -1,0 +1,54 @@
+% Enter the names of your group members below.
+% If you only have 2 group members, leave the last space blank
+%
+%%%%%
+%%%%% NAME: Khushi Chowdhury
+%%%%% NAME: Asher Andargachew
+%%%%% NAME: Wathaned Ean
+%
+% Add the required rules in the corresponding sections. 
+% If you put the rules in the wrong sections, you will lose marks.
+%
+% You may add additional comments as you choose but DO NOT MODIFY the comment lines below
+%
+
+%%%%% SECTION: puzzleGenerateAndTestSession
+%%%%% Put your session for generate and test below
+
+?- Start is cputime, solve_and_print, End is cputime, Time is End - Start.
+Start = 0.015625
+End = 0.015625
+Time = 0.0
+Yes (0.00s cpu)
+
+q1a_puzzle_generate_and_test.pl compiled 6360 bytes in 0.00 seconds
+Solution:
+  1 8 3
+* 1 6 4
+--------------
+      1 3 2
++ 1 0 5 8
+  1 8 3
+--------------
+  3 0 0 1 2
+
+
+%%%%% SECTION: puzzleInterleavingSession
+%%%%% Put your session for generate and test below
+
+?- Start is cputime, solve_and_print, End is cputime, Time is End - Start.
+Start = 0.015625
+End = 0.015625
+Time = 0.0
+Yes (0.00s cpu)
+
+
+Solution:
+  1 8 3
+* 1 6 4
+--------------
+      1 3 2
++ 1 0 5 8
+  1 8 3
+--------------
+  3 0 0 1 2

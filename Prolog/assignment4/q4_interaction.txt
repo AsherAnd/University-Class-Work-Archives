@@ -1,0 +1,78 @@
+% Enter the names of your group members below.
+% If you only have 2 group members, leave the last space blank
+%
+%%%%%
+%%%%% NAME: Khushi Chowdhury
+%%%%% NAME: Asher Andargachew
+%%%%% NAME: Wathaned Ean
+%
+% Add your interaction below.
+% 
+%%%%% INTERACTION
+
+%%%%%% QUERY 1
+
+?- what([a, hip_hop, song, by, juice_wrld], S).
+S = empty
+Yes (0.00s cpu, solution 1, maybe more)
+
+
+
+%%%%%% QUERY 2
+
+?- what([the, genre, of, damn], G).
+G = hip_hop
+Yes (0.00s cpu, solution 1, maybe more)
+
+%%%%%% QUERY 3
+
+?- what([the, release_year, of, strangers], A).
+A = 2018
+Yes (0.00s cpu, solution 1, maybe more)
+
+
+
+%%%%%% QUERY 4
+
+?- what([the, length, of, empty], L).
+L = 109
+Yes (0.00s cpu, solution 1, maybe more)
+
+
+%%%%%% QUERY 5
+
+?- what([the, second, song, on, damn], S).
+S = dna
+Yes (0.00s cpu, solution 1, maybe more)
+
+%%%%%% QUERY 6
+
+?- what([a, short, song, released_in, 2020], S).
+S = yankee_and_the_brave
+Yes (0.00s cpu, solution 1, maybe more)
+
+
+
+%%%%%% QUERY 7
+
+?- what([a, long, song, by, j_cole], S).
+S = power_trip
+Yes (0.00s cpu, solution 1, maybe more)
+
+%%%%%% QUERY 8
+
+?- what([a, rae_sremmurd, album, released_before, rtj4], S).
+S = sremmlife
+Yes (0.00s cpu, solution 1, maybe more)
+
+%%%%%% QUERY 9
+
+?- what([a, new, song, by, labrinth], S).
+No (0.00s cpu)
+%%% no new songs by labrinth
+
+%%%%%% QUERY 10
+
+?- what([a, old, song, by, the_weeknd], S).
+No (0.00s cpu)
+%%% no old songs by the weeknd
